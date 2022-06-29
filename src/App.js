@@ -1,14 +1,17 @@
-import { BlueButton } from "./styles/typography";
+import { useState } from "react";
+import { LoginPage } from "./pages/login-page";
+import { SignupPage } from "./pages/signup-page";
+import { CustomLink } from "./styles/typography";
 
 function App() {
-  
-  function Button() {
-    return(<BlueButton>Hola</BlueButton>);
-  };
+  const [ showLogin, setShowLogin ] = useState(true)
+
+
   return (
     <>
-      <h1>Poke Collection</h1>
-      <Button />
+      <SignupPage />
+      {/* <LoginPage /> */}
+      <CustomLink>link</CustomLink>
     </>
   );
 }

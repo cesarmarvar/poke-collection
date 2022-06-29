@@ -9,10 +9,11 @@ export async function login(credentials) {
   return user;
 }
 
+
 export async function logout() {
   const response = await apiFetch("logout", {
     method: "DELETE"
   })
-  sessionStorage.removeItem(token)
+  sessionStorage.removeItem(tokenKey)
   return response;
 }
