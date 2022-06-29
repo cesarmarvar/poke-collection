@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
+import styled from "@emotion/styled";
 
 
 export const fonts = {
@@ -16,3 +17,23 @@ color: black;
 background-color: blue;
 }
 `;
+
+export const BlueButton = styled("button")`
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 16px;
+background: #2D9CDB;
+box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+border-radius: 4px;
+border: none;
+color: white;
+cursor: pointer;
+font-family: Source Code Pro;
+font-weight: 700;
+// margin: 0 auto;
+&:hover {
+    background: #2DB2DB;
+}
+`
