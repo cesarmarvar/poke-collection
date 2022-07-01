@@ -6,6 +6,7 @@ export function Input({ id, name, type = "text", placeholder, value, label, onCh
   return (
   <>
   {label && <label htmlFor={id || name}>{label}</label>}
+  <br />
   <InputBox 
     id={id || name}
     name={name}

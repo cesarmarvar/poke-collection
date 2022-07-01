@@ -33,8 +33,11 @@ cursor: pointer;
 font-family: Source Code Pro;
 font-weight: 700;
 margin: 0 auto;
-&:hover {
-    background: #006bb3;
+:hover {
+  background: #006bb3;
+}
+:active {
+  padding: 7px 15px;
 }
 `
 
@@ -50,8 +53,10 @@ color: #2D9CDB;
 cursor: pointer;
 text-align: center;
 :hover {
-  padding-top: 2px;
   color: #006bb3
+}
+:active {
+  padding-top: 2px;
 }`
 
 export const FormContainer = styled.div`

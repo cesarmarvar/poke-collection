@@ -2,7 +2,7 @@ import { Input } from "../components/input";
 import { BlueButton } from "../styles/typography";
 import { createUser } from "../services/user-services";
 import { useState } from "react";
-import { FormContainer, H1 } from "../styles/typography";
+import { FormContainer, H1, CustomLink } from "../styles/typography";
 
 
 export function SignupPage() {
@@ -30,7 +30,7 @@ export function SignupPage() {
   }
 
 return(
-  <FormContainer>
+  <>
     <H1>Welcome to Poke Collection!</H1>
     <form onSubmit={handleSubmit}>
       <Input 
@@ -67,6 +67,6 @@ return(
         />
       <BlueButton type="submit">Create account</BlueButton>
     </form>
-  </FormContainer>
+  </>
   )
 }
