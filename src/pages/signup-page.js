@@ -2,7 +2,7 @@ import { Input } from "../components/input";
 import { BlueButton } from "../styles/typography";
 import { createUser } from "../services/user-services";
 import { useState } from "react";
-import { FormContainer, H1, CustomLink } from "../styles/typography";
+import { H1 } from "../styles/typography";
 
 
 export function SignupPage() {
@@ -53,7 +53,7 @@ return(
         name="first_name"
         type="first_name"
         value={first_name}
-        placeholder="*******"
+        placeholder="John"
         onChange={handleChange}
         label="First Name" 
         />
@@ -61,7 +61,7 @@ return(
         name="last_name"
         type="last_name"
         value={last_name}
-        placeholder="*******"
+        placeholder="Doe"
         onChange={handleChange}
         label="Last Name" 
         />

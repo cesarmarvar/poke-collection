@@ -2,7 +2,7 @@ import { Input } from "../components/input";
 import { BlueButton } from "../styles/typography";
 import { login } from "../services/sessions-services";
 import { useState } from "react";
-import { CustomLink, FormContainer, H1 } from "../styles/typography";
+import { H1 } from "../styles/typography";
 
 export function LoginPage() {
 
@@ -27,8 +27,8 @@ export function LoginPage() {
   }
 
 return(
-  <FormContainer>
-    <H1>Welcome to Poke Collection!</H1>
+  <>
+    <H1>Welcome to Poke Collection</H1>
     <form onSubmit={handleSubmit}>
       <Input 
         name="email" 
@@ -48,6 +48,6 @@ return(
         />
       <BlueButton type="submit"> Login</BlueButton>
     </form>
-  </FormContainer>
+  </>
   )
 }

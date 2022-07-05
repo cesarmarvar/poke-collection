@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import { LoginPage } from "./pages/login-page";
+import SearchPage from "./pages/search-page";
 import { SignupPage } from "./pages/signup-page";
 import { CustomLink, FormContainer } from "./styles/typography";
 
@@ -14,10 +15,11 @@ function App() {
     }
 
   return (
-    <FormContainer>
-      {showLogin ? <LoginPage /> : <SignupPage />}
-      <CustomLink onClick={handleClick}>{showLogin ? "Create account" : "Login"}</CustomLink>
-    </FormContainer>
+    // <FormContainer>
+    //   {showLogin ? <LoginPage /> : <SignupPage />}
+    //   <CustomLink onClick={handleClick}>{showLogin ? "Create account" : "Login"}</CustomLink>
+    // </FormContainer>
+    <SearchPage />
   );
 }
 

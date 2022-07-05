@@ -83,3 +83,17 @@ border: none;
 border-radius: 4px;
 font-family: Source Code Pro;
 margin-bottom: 2rem;`
+
+export const SearchForm = styled("form")`
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+gap: 0.5rem;`
+
+export const SearchContainer = styled.div`
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+justify-content: center;
+align-items: center`
