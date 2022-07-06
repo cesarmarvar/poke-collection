@@ -1,4 +1,4 @@
-import { AiOutlineStar } from "react-icons/ai";
+import { AiFillStar } from "react-icons/ai";
 import styled from "@emotion/styled";
 
 const Container = styled.button`
@@ -21,15 +21,15 @@ gap: 0.5rem;
   background: #006bb3;
 }
 :active {
-  margin-top: 4px;
-  padding-top: 6px;
+  margin-top: 3px;
+  padding-top: 7px;
 }`
 
 export function FavoriteButton({children}) {
 
   return(
     <Container>
-      <AiOutlineStar size="20px"/>
+      <AiFillStar size="20px" color=""/>
       <text>{children}</text>
     </Container>
   )

@@ -37,7 +37,7 @@ return(
         placeholder="example@mail.com"
         onChange={handleChange}
         label="Email"
-        />
+        /><br />
       <Input 
         name="password"
         type="password"
@@ -45,7 +45,7 @@ return(
         placeholder="*******"
         onChange={handleChange}
         label="Password" 
-        />
+        /><br />
       <BlueButton type="submit"> Login</BlueButton>
     </form>
   </>

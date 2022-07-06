@@ -40,7 +40,7 @@ return(
         placeholder="example@mail.com"
         onChange={handleChange}
         label="Email"
-        />
+        /><br />
       <Input 
         name="password"
         type="password"
@@ -48,7 +48,7 @@ return(
         placeholder="*******"
         onChange={handleChange}
         label="Password" 
-        />
+        /><br />
       <Input 
         name="first_name"
         type="first_name"
@@ -56,7 +56,7 @@ return(
         placeholder="John"
         onChange={handleChange}
         label="First Name" 
-        />
+        /><br />
       <Input 
         name="last_name"
         type="last_name"
@@ -64,7 +64,7 @@ return(
         placeholder="Doe"
         onChange={handleChange}
         label="Last Name" 
-        />
+        /><br />
       <BlueButton type="submit">Create account</BlueButton>
     </form>
   </>

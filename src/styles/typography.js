@@ -37,7 +37,8 @@ margin: 0 auto;
   background: #006bb3;
 }
 :active {
-  padding: 7px 15px;
+  margin-top: 3px;
+  padding-top: 7px;
 }
 `
 
@@ -82,7 +83,7 @@ box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
 border: none;
 border-radius: 4px;
 font-family: Source Code Pro;
-margin-bottom: 2rem;`
+`
 
 export const SearchForm = styled("form")`
 display: flex;
@@ -94,6 +95,6 @@ gap: 0.5rem;`
 export const SearchContainer = styled.div`
 display: flex;
 flex-direction: column;
-gap: 0.5rem;
+gap: 1.5rem;
 justify-content: center;
-align-items: center`
+align-items: center;`

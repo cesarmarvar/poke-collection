@@ -4,6 +4,12 @@ import { FaRulerVertical } from "react-icons/fa";
 import { pokemonTypeColor } from "../styles/pokemon-types";
 import { FavoriteButton } from "./favorite-button";
 
+const SearchContainer = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;`
+
 const PokeData = styled.p`
 margin: 0px;
 padding: 0px;`
@@ -21,6 +27,26 @@ display: flex;
 flex-direction: row;
 gap: 0.3rem;`
 
+const SingleType = styled.div`
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+color: white;
+padding: 2px 1.3rem;
+width: 46px;
+height: 20px;
+border-radius: 10px;
+font-weight: 700;
+font-size: 15px;
+`
+
+const TypeContainer = styled.div`
+display: flex;
+flex-direction: row;
+gap: 0.5rem;
+justify-content: center;
+padding: 0.6rem 0px;`
 
 function formatId(id) {
   id = String(id);
@@ -29,15 +55,20 @@ function formatId(id) {
 
 export function PokemonData({pokemon}) {
 
+  function handleFavoriteClick(e) {
+    
+  }
 
   return (
-    <div>
-      <h1>{pokemon.name}</h1>
-      <h2 style={{textAlign: "center"}}>{formatId(pokemon.id)}</h2>
+    <SearchContainer>
+      <h1 style={{margin: "0"}}>{pokemon.name}</h1>
+      <h2 style={{margin: "4px"}}>{formatId(pokemon.id)}</h2>
       <PokeImg src={pokemon.sprites.other["official-artwork"].front_default} />
+      <TypeContainer>
         {pokemon.types.map((e) => {
-          return (<p key={e.slot}>{e.type.name}</p>)
+          return (<SingleType style={{backgroundColor: `${pokemonTypeColor[e.type.name]}`}} key={e.slot}>{e.type.name}</SingleType>)
       })}
+      </TypeContainer>
       <Stats>
         <StatsContainer>
           <GiWeight />
@@ -48,7 +79,7 @@ export function PokemonData({pokemon}) {
           <PokeData>{pokemon.height / 10} m</PokeData>
         </StatsContainer>
       </Stats><br />
-      <FavoriteButton>Mark as favorite</FavoriteButton>
-    </div>
+      <FavoriteButton onClick={handleFavoriteClick}>Mark as favorite</FavoriteButton>
+    </SearchContainer>
   )
 }
